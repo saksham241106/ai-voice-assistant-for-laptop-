@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AURA AI Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="brand">
+
+            <div class="logo">
+                A
+            </div>
+
+            <div>
+                <h1>AURA</h1>
+                <p>Your Personal AI Assistant</p>
+            </div>
+
+        </div>
+
+        <div class="active">
+            <span></span>
+            AURA is Active
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <section class="welcome">
+
+            <h2>Hello 👋</h2>
+
+            <p>
+                I'm AURA. You can talk to me or type your message.
+            </p>
+
+        </section>
+
+
+        <!-- AVATAR -->
+        <section class="avatar-container">
+
+            <div class="avatar-glow"></div>
+
+            <div class="avatar-ring ring1"></div>
+            <div class="avatar-ring ring2"></div>
+
+            <img
+                src="{{ url_for('static', filename='avatar.png') }}"
+                class="aura-avatar"
+                id="auraAvatar"
+                alt="AURA Virtual Assistant"
+            >
+
+        </section>
+
+
+        <!-- STATUS -->
+        <div class="status" id="status">
+            🟢 Ready
+        </div>
+
+
+        <!-- VOICE BUTTON -->
+        <button class="microphone" id="micButton">
+            🎤
+        </button>
+
+        <p class="mic-text">
+            Click microphone to speak
+        </p>
+
+
+        <!-- CHATBOT -->
+        <section class="chat-container">
+
+            <div class="chat-header">
+
+                <div>
+                    <strong>AURA Assistant</strong>
+                    <small>Online</small>
+                </div>
+
+                <span class="online-dot"></span>
+
+            </div>
+
+
+            <!-- MESSAGES -->
+
+            <div class="chat-messages" id="chatMessages">
+
+                <div class="chat-message aura">
+
+                    <div class="message-avatar">
+                        A
+                    </div>
+
+                    <div class="message-content">
+
+                        <strong>AURA</strong>
+
+                        <p>
+                            Hello! I'm AURA. How can I help you?
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INPUT -->
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Type a message..."
+                    autocomplete="off"
+                >
+
+                <button id="sendButton">
+                    ➤
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="buttons">
+
+    <button onclick="sendCommand('open youtube')">
+        ▶ YouTube
+    </button>
+
+    <button onclick="sendCommand('search web artificial intelligence')">
+        🔎 Search Web
+    </button>
+
+    <button onclick="sendCommand('open vscode')">
+        💻 VS Code
+    </button>
+
+    <button onclick="sendCommand('open calculator')">
+        🧮 Calculator
+    </button>
+
+    <button onclick="sendCommand('play music')">
+        🎵 Music
+    </button>
+
+    <button onclick="sendCommand('system information')">
+        💻 System Info
+    </button>
+
+    <button onclick="sendCommand('what time is it')">
+        🕐 Time
+    </button>
+
+    <button onclick="sendCommand('tell me a joke')">
+        😄 Joke
+    </button>
+
+</div>
+
+            <h3>Quick Actions</h3>
+
+            <div class="buttons">
+
+                <button onclick="sendCommand('hello')">
+                    👋 Hello
+                </button>
+
+                <button onclick="sendCommand('what time is it')">
+                    🕐 Time
+                </button>
+
+                <button onclick="sendCommand('open youtube')">
+                    ▶ YouTube
+                </button>
+
+                <button onclick="sendCommand('tell me a joke')">
+                    😄 Joke
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        Smart • Fast • Always with you
+
+    </footer>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
